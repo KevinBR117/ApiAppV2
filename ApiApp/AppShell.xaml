@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="ApiApp.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:ApiApp.Pages"
+    FlyoutBackgroundColor="CornflowerBlue">
+    <!--FlyoutIcon="nasa.png">-->
+    <!--Shell.FlyoutBehavior="Disabled">-->
+
+    <Shell.FlyoutHeader>
+        <Grid HeightRequest="100" BackgroundColor="CornflowerBlue">
+            <Image Source="nasa.png"></Image>
+        </Grid>
+    </Shell.FlyoutHeader>
+
+    <!--<ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />-->
+
+    <FlyoutItem Title="Astronomy picture of the day" Icon="milky_way.png">
+        <ShellContent
+            ContentTemplate = "{DataTemplate local:AstronomyPicutreOfTheDayPage }"/>
+        <!--ContentTemplate = "{DataTemplate local:InterplanetaryShock }"/>-->
+            <!--ContentTemplate = "{DataTemplate local:GeomagneticStorm }"/>-->
+    </FlyoutItem>
+
+    <FlyoutItem Title="DONKI" Icon="donki.svg">
+
+        <ShellContent Title="DONKI" Icon="donki.svg"
+        ContentTemplate = "{DataTemplate local:DONKI }"/>
+
+        <ShellContent Title="Interplanetary shock" Icon="venus.png"
+            ContentTemplate = "{DataTemplate local:InterplanetaryShock}"/>
+
+        <ShellContent Title="Geomagnetic storm" Icon="sun.svg"
+            ContentTemplate="{DataTemplate local:GeomagneticStorm}"/>
+
+    </FlyoutItem>
+
+</Shell>

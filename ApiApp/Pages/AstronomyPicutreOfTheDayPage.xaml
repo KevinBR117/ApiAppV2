@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ApiApp.Pages.AstronomyPicutreOfTheDayPage"
+             Title="Astronomy Picutre Of The Day">
+    <ScrollView Margin="10">
+
+        <VerticalStackLayout>
+            
+            <HorizontalStackLayout Spacing="20" Padding="0,0,10,0">
+                <Label
+                    Text="Hoy:"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    Padding="5"
+                    FontSize="Small"
+                />
+                <Label
+                     Text="fecha"
+                     x:Name="lblDate"
+                     VerticalOptions="Center"
+                     HorizontalOptions="Center"
+                     Padding="5"
+                     FontSize="Small"
+                />
+                
+            </HorizontalStackLayout>
+
+            
+
+            <HorizontalStackLayout Spacing="20" Padding="0,0,10,0">
+
+                <Label Text="Imagen por fecha:"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center"
+                       Padding="5"
+                       FontSize="Small"/>
+
+                <DatePicker x:Name="datePicker"
+                            MinimumDate="01/01/2020"
+                            MaximumDate="12/31/2023"
+                            VerticalOptions="Center"
+                            HorizontalOptions="Center"
+                            Margin="25"/>
+
+                <Button Text="Consultar"
+                        Clicked="OnConsultButtonClicked"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center"
+                        WidthRequest="200"
+                        HeightRequest="50"
+                        Margin="25"
+                        FontSize="Small"
+                        />
+            </HorizontalStackLayout>
+
+            
+
+            <HorizontalStackLayout Spacing="20" Padding="0,0,10,0">
+                <Label
+                    Text="Título:"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    Padding="5"
+                    FontSize="Small"
+                />
+                <Label 
+                    Text="titulo de la imagen"
+                    x:Name="lblTitle"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Center"
+                    Padding="5"
+                    FontSize="Small"
+                />
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout Spacing="20" Padding="0,0,10,0">
+
+                <Label
+                    Text="Autor:"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    Padding="5"
+                    FontSize="Small"
+                />
+
+                <Label 
+                    Text="derechos de autor"
+                    x:Name="lblCopyright"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Center"
+                    Padding="5"
+                    FontSize="Small"
+                />
+                
+            </HorizontalStackLayout>
+            
+            <Image Source="nasa.png" Aspect="AspectFit" HeightRequest="200" x:Name="imgSource" Margin="10" />
+
+            <Label
+                Text="Descripción:"
+                VerticalOptions="Center"
+                HorizontalOptions="Start"
+                Padding="5"
+                FontSize="Small"
+            />
+
+            <Label
+                Text="descripcion de la imagen"
+                x:Name="lblExplanation"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                Padding="5"
+                FontSize="Small"
+            />
+
+            <!--<Grid Padding="5" RowSpacing="3" ColumnSpacing="1" BackgroundColor="Blue">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                
+            </Grid>-->
+
+            <Label
+                Text=""
+                x:Name="estadoConexion"
+                Padding="5"/>
+
+            <Button
+                 Text="Guardar Imagen"
+                 Clicked="OnNewButtonClicked"
+                 VerticalOptions="Center"
+                 HorizontalOptions="Center"
+                 WidthRequest="200"
+                 HeightRequest="50"
+                 FontSize="Small"
+                 Margin="5"
+            />
+            <!--Grid.Row="1"-->
+
+            <Label x:Name="statusMessage"
+            />
+            <!--Grid.Row="2"-->
+
+
+            <!--<Button
+                Text="Obtener Imagenes"
+                Clicked="OnGetButtonClicked"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                WidthRequest="200"
+                HeightRequest="50"
+                FontSize="Small"
+                Grid.Row="3"  
+            />
+
+            <CollectionView x:Name="pictureList" Grid.Row="4" BackgroundColor="Violet">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="2*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Text="{Binding Id}"/>
+                            <Label Grid.Column="1" Text="{Binding Name}"/>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>-->
+
+        </VerticalStackLayout>
+        
+    </ScrollView>
+    
+</ContentPage>

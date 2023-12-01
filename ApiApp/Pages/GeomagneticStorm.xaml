@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ApiApp.Pages.GeomagneticStorm"
+             Title="Geomagnetic Storm">
+   
+    <ScrollView Margin="10">
+
+        <VerticalStackLayout Spacing="20">
+            <Label 
+                 Text="El índice Kp describe la perturbación del campo magnético de la Tierra provocada por el viento solar. Cuanto más rápido sopla el viento solar, mayor es la turbulencia. El índice oscila entre 0, que indica baja actividad, y 9, lo que significa que se está produciendo una intensa tormenta geomagnética."
+                 VerticalOptions="Center" 
+                 HorizontalOptions="Center" 
+                Padding="5"
+                FontSize="Small"/>
+
+            <HorizontalStackLayout Spacing="50" Padding="0,0,10,0">
+                <Label
+                    Text="Fecha inicial:"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    Padding="5"
+                    FontSize="Small"
+                />
+                <Entry
+                     Text=""
+                     Placeholder="yyyy-mm-dd"
+                     x:Name="entInicio"
+                     VerticalOptions="Center"
+                     HorizontalOptions="Center"
+                     FontSize="Small"
+                />
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout Spacing="50" Padding="0,0,10,0">
+                <Label
+                    Text="Fecha final:"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    Padding="5"
+                    FontSize="Small"
+                />
+                <Entry 
+                    Placeholder="yyyy-mm-dd"
+                    x:Name="entFinal"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Center"
+                    FontSize="Small"
+                />
+            </HorizontalStackLayout>
+
+                <Button
+                    x:Name="btnConsultar"
+                    Clicked="OnConsultarButtonClicked"
+                    Text="Consultar"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    WidthRequest="100"
+                    HeightRequest="50"
+                    FontSize="Small"
+                />
+
+            <!--<HorizontalStackLayout Spacing="50" Padding="0,0,50,0" Margin="0,0,50,0">
+                <Label
+                     Text="kpIndex:"
+                     VerticalOptions="Center"
+                     HorizontalOptions="Center"
+                     Padding="5"
+                     FontSize="Small"
+                 />
+                <Label 
+                     Text="indice"
+                     x:Name="lblKpIndex"
+                     VerticalOptions="Center" 
+                     HorizontalOptions="Center"
+                     Padding="5"
+                     FontSize="Small"
+                 />
+            </HorizontalStackLayout>-->
+
+            <Grid
+                x:Name="gridKpIndex"
+                Background="CornflowerBlue"
+                ColumnSpacing="10"
+                RowSpacing="10"  
+                Padding="0,0,5,0" 
+                Margin="0,30,0,0"
+             >
+            
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
+                </Grid.ColumnDefinitions>
+            </Grid>
+
+        </VerticalStackLayout>
+
+    </ScrollView>
+
+
+</ContentPage>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ApiApp.Pages.DONKI"
+             Title="DONKI">
+    <ScrollView Margin="10">
+
+        <VerticalStackLayout>
+
+            <Label
+                Text="The Space Weather Database of Notifications, Knowledge, Information"
+                VerticalOptions="Center"
+                FontSize="Medium"
+                Padding="5"
+                Margin="0,15,0,25"
+                FontAttributes="Bold"
+            />
+
+            <Label 
+                Text="La base de datos de notificaciones, conocimientos e información sobre el clima espacial (DONKI) es una herramienta integral en línea para pronosticadores del clima espacial, científicos y la comunidad científica espacial en general."
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" 
+                FontSize="Small"
+                Padding="5"
+            />
+
+            <Label
+                Text="&#x0a; DONKI narra las interpretaciones diarias de las observaciones, análisis, modelos, pronósticos y notificaciones del clima espacial proporcionados por el Centro de Investigación del Clima Espacial (SWRC), una funcionalidad integral de búsqueda en la base de conocimientos para respaldar la resolución de anomalías y la investigación de la ciencia espacial, vínculos inteligentes, relaciones, causas y efectos entre las actividades del clima espacial y el acceso API del servicio web integral a la información almacenada en DONKI"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                FontSize="Small"
+                Padding="5"
+                Margin="0,15,0,0"
+            />
+
+        </VerticalStackLayout>
+
+    </ScrollView>
+
+</ContentPage>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ApiApp.Pages.InterplanetaryShock"
+             Title="Interplanetary Shock">
+
+    <ScrollView Margin="10">
+
+        <VerticalStackLayout Spacing="20">
+            <Label 
+                Text="Las ondas de choque interplanetarias son un tipo de choque sin colisión, en el que las partículas transfieren energía a través de campos electromagnéticos en lugar de rebotar directamente entre sí. Estos choques sin colisión son un fenómeno que se encuentra en todo el universo, incluso en supernovas, agujeros negros y estrellas distantes. "
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" 
+                Padding="5"
+                FontSize="Small"/>
+            
+            <HorizontalStackLayout Spacing="50" Padding="0,0,10,0">
+                <Label
+                    Text="Fecha inicial:"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    Padding="5"
+                    FontSize="Small"
+                />
+                <Entry
+                     Text=""
+                     Placeholder="yyyy-mm-dd"
+                     x:Name="entInicio"
+                     VerticalOptions="Center"
+                     HorizontalOptions="Center"
+                     FontSize="Small"
+                />
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout Spacing="50" Padding="0,0,10,0">
+                <Label
+                    Text="Fecha final:"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    Padding="5"
+                    FontSize="Small"
+                />
+                <Entry 
+                    Placeholder="yyyy-mm-dd"
+                    x:Name="entFinal"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Center"
+                    FontSize="Small"
+                />
+            </HorizontalStackLayout>
+
+            <Button
+                    x:Name="btnConsultar"
+                    Clicked="OnConsultarButtonClicked"
+                    Text="Consultar"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    WidthRequest="100"
+                    HeightRequest="50"
+                    FontSize="Small"
+                />
+            <ScrollView Orientation="Both" HorizontalScrollBarVisibility="Always" HorizontalOptions="CenterAndExpand" Padding="5,5,5,5">
+           
+            <Grid
+                
+                x:Name="gridInterplanetaryShock"
+                Background="CornflowerBlue"
+                ColumnSpacing="5"
+                RowSpacing="10"
+                Padding="5,5,5,0" 
+                Margin="0,0,5,0"
+                HorizontalOptions="StartAndExpand"
+                WidthRequest="1000"
+                
+             >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
+                </Grid.ColumnDefinitions>
+            </Grid>
+
+            </ScrollView>
+
+        </VerticalStackLayout>
+
+    </ScrollView>
+</ContentPage>
